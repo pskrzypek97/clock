@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Clock App</title>
+	</head>
+	<body>
+		<main class="container">
+
+			<article class="qoute">
+				<blockquote class="quote__text">
+					<p>
+						"The science of operations, as derived from mathematics more
+						especially, is a science of itself, and has its own abstract truth
+						and value."
+					</p>
+          <figcaption>Ada Lovelace</figcaption>
+          </blockquote>
+					
+					<svg class="qoute__refresh">
+						<use xlink:href="./images/desktop/sprite.svg#icon-refresh"></use>
+					</svg>
+				</div>
+			</article>
+
+      <section class="clock">
+        <div class="main">
+        <div class="clock__welcome">
+          <svg class="clock__icon">
+						<use xlink:href="./images/desktop/sprite.svg#icon-sun"></use>
+					</svg>
+          <p>Good morning, it's currently</p>
+        </div>
+        <div class="clock__time">
+          <h1>11:37 <span class="clock__timezone">bst</span></h1>
+        </div>
+        <div class="clock__location">
+          <h2>In London, UK</h2>
+        </div>
+      </div>
+
+      <button class="btn">More 
+        <svg>
+          <use xlink:href="./images/desktop/sprite.svg#icon-arrow-down"></use>
+        </svg>
+      </button>
+      </section>
+
+      <section class="more">
+        <div class="more__info">
+          <h3>Current timezone</h3>
+          <p>Europe/London</p>
+        </div>
+
+        <div class="more__info">
+          <h3>Day of the year</h3>
+          <p>295</p>
+        </div>
+
+        <div class="more__info">
+          <h3>Day of the week</h3>
+          <p>5</p>
+        </div>
+
+        <div class="more__info">
+          <h3>Week number</h3>
+          <p>42</p>
+        </div>
+      </section>
+		</main>
+	</body>
+</html>
