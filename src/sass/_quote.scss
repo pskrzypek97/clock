@@ -1,0 +1,38 @@
+.quote {
+	width: 70rem;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 30rem;
+
+	&__text {
+		width: 80%;
+
+		& > p {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&__refresh {
+		margin-top: 0.8rem;
+
+		width: 2rem;
+		height: 2rem;
+
+		fill: lighten($color-black-pitch, 90%);
+		cursor: pointer;
+		transition: fill 250ms;
+
+		&:hover,
+		&:focus {
+			fill: $color-white;
+		}
+
+		// & {
+		// 	fill: $color-white;
+		// 	animation-name: spinningRefresh;
+		// 	animation-duration: 1s;
+		// 	animation-iteration-count: infinite;
+		// 	animation-timing-function: linear;
+		// }
+	}
+}

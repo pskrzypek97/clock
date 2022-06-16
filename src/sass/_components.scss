@@ -1,0 +1,49 @@
+.btn {
+	@extend %reset-button;
+	align-self: flex-end;
+
+	width: 14rem;
+	height: 5rem;
+	padding: 1rem;
+	padding-left: 2rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: inherit;
+
+	background-color: $color-white;
+	color: lighten($color-black-light, 40%);
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: $font-700;
+	letter-spacing: 5px;
+	border-radius: 17%/50%; // make capsule shaped button
+	cursor: pointer;
+
+	& div {
+		background-color: $color-black-light;
+		display: flex;
+
+		border-radius: 50%;
+		transition: background-color 250ms linear;
+
+		& svg {
+			width: 1.5rem;
+			height: 1.5rem;
+			margin: 1.2rem;
+			transition: transform 250ms;
+		}
+	}
+
+	&:hover {
+		& div {
+			background-color: lighten($color-black-light, 40%);
+		}
+	}
+
+	&:focus {
+		& div svg {
+			transform: rotate(180deg);
+		}
+	}
+}

@@ -1,0 +1,96 @@
+// COLOR VARIABLES
+$color-black-pitch: #000;
+$color-black-light: #303030;
+$color-white: #fff;
+
+// FONT VARIABLES
+$font-primary: 'Inter', sans-serif;
+$font-400: 400;
+$font-700: 700;
+
+// PLACEHOLDER SELECTOR
+%reset-button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+
+	background: transparent;
+
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
+
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
+
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+}
+
+// ANIMATIONS
+@keyframes rotateIcon {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes spinningRefresh {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/////////////////////////////////////////////////////
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-primary;
+	line-height: 1.4;
+	overflow: hidden;
+}
+
+.container {
+	padding-top: 5rem;
+	padding-bottom: 10rem;
+	padding-inline: 15rem;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	background-image: linear-gradient(
+			transparentize($color-black-light, 0.7),
+			transparentize($color-black-light, 0.7)
+		),
+		url(../images/desktop/bg-image-daytime.jpg);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

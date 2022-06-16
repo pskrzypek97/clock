@@ -1,0 +1,40 @@
+.more {
+	padding-left: 15rem;
+	padding-block: 10rem;
+	backdrop-filter: blur(2rem);
+	background-color: transparentize($color-white, 0.4);
+
+	display: grid;
+	row-gap: 4rem;
+	column-gap: 7rem;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+
+	grid-template-areas:
+		'timezone year'
+		'day week';
+
+	// transform: translateY(-100%);
+
+	&__info {
+		& > :not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	& > *:first-child {
+		grid-area: timezone;
+	}
+
+	& > *:nth-child(2) {
+		grid-area: day;
+	}
+
+	& > *:nth-child(3) {
+		grid-area: year;
+	}
+
+	& > *:last-child {
+		grid-area: week;
+	}
+}
