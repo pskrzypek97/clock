@@ -54,6 +54,14 @@
 		font-size: 2rem;
 		text-transform: uppercase;
 		letter-spacing: 4px;
+
+		&::after {
+			content: ", it's currently";
+
+			@media only screen and (max-width: $bp-small) {
+				display: none;
+			}
+		}
 	}
 	&--more {
 		font-size: 5.6rem;

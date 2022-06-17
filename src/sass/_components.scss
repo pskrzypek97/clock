@@ -31,7 +31,7 @@
 			width: 1.5rem;
 			height: 1.5rem;
 			margin: 1.2rem;
-			transition: transform 250ms;
+			transition: transform 750ms ease-out;
 		}
 	}
 
@@ -41,14 +41,29 @@
 		}
 	}
 
-	&:focus {
-		& div svg {
-			transform: rotate(180deg);
-		}
-	}
-
 	@media only screen and (max-width: $bp-medium) {
 		align-self: flex-start;
 		margin-top: 8rem;
 	}
+}
+
+.disappear {
+	visibility: hidden;
+}
+
+.active {
+	transform: translateY(-150%);
+
+	@media only screen and (max-width: $bp-medium) {
+		transform: translateY(-100%);
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		transform: translateY(-110%);
+	}
+}
+
+.rotate {
+	fill: $color-white;
+	animation: rotate 2s infinite linear;
 }

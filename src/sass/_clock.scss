@@ -1,6 +1,7 @@
 .clock {
 	display: flex;
 	justify-content: space-between;
+	transition: all 1s;
 
 	&__welcome {
 		display: flex;

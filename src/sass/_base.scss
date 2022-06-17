@@ -13,6 +13,18 @@ $bp-big: 87.5em;
 $bp-medium: 68.75em;
 $bp-small: 43.75em;
 
+// ANIMATIONS
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 // PLACEHOLDER SELECTOR
 %reset-button {
 	border: none;
@@ -36,27 +48,6 @@ $bp-small: 43.75em;
 
 	/* Corrects inability to style clickable `input` types in iOS */
 	-webkit-appearance: none;
-}
-
-// ANIMATIONS
-@keyframes rotateIcon {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(180deg);
-	}
-}
-
-@keyframes spinningRefresh {
-	0% {
-		transform: rotate(0);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
 }
 
 /////////////////////////////////////////////////////
@@ -102,7 +93,7 @@ body {
 			transparentize($color-black-light, 0.7),
 			transparentize($color-black-light, 0.7)
 		),
-		url(../images/desktop/bg-image-nighttime.jpg);
+		url(../images/desktop/bg-image-daytime.jpg);
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	background-size: cover;

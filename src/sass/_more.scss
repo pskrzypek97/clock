@@ -15,7 +15,8 @@
 		'timezone year'
 		'day week';
 
-	// transform: translateY(-100%);
+	margin-top: 22.5rem;
+	transition: all 1s;
 
 	&__info {
 		display: flex;
@@ -69,11 +70,16 @@
 	}
 
 	@media only screen and (max-width: $bp-small) {
+		margin-top: 10rem;
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			'timezone'
 			'day'
 			'year'
 			'week';
+	}
+
+	@media only screen and (max-width: $bp-medium) and (min-width: $bp-small) {
+		margin-top: 5rem;
 	}
 }
