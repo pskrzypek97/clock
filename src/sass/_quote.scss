@@ -27,6 +27,11 @@
 			fill: $color-white;
 		}
 
+		@media only screen and (max-width: $bp-small) {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
 		// & {
 		// 	fill: $color-white;
 		// 	animation-name: spinningRefresh;
@@ -34,5 +39,10 @@
 		// 	animation-iteration-count: infinite;
 		// 	animation-timing-function: linear;
 		// }
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		width: 55rem;
+		margin-bottom: 0;
 	}
 }

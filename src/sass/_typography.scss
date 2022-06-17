@@ -24,6 +24,10 @@
 	text-transform: uppercase;
 	font-weight: $font-400;
 	letter-spacing: 3px;
+
+	@media only screen and (max-width: $bp-small) {
+		font-size: 1.8rem;
+	}
 }
 
 .paragraph {
@@ -36,6 +40,14 @@
 			font-size: 1.8rem;
 			font-weight: $font-700;
 		}
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 2rem;
+
+			& + figcaption {
+				font-size: 2rem;
+			}
+		}
 	}
 	&--clock {
 		color: $color-white;
@@ -46,5 +58,9 @@
 	&--more {
 		font-size: 5.6rem;
 		font-weight: $font-700;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 3.5rem;
+		}
 	}
 }

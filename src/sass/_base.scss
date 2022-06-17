@@ -8,6 +8,11 @@ $font-primary: 'Inter', sans-serif;
 $font-400: 400;
 $font-700: 700;
 
+// RESPONSIVE VARIABLES
+$bp-big: 87.5em;
+$bp-medium: 68.75em;
+$bp-small: 43.75em;
+
 // PLACEHOLDER SELECTOR
 %reset-button {
 	border: none;
@@ -67,6 +72,14 @@ $font-700: 700;
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
+
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 56.25%;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		font-size: 37.5%;
+	}
 }
 
 body {
@@ -89,8 +102,16 @@ body {
 			transparentize($color-black-light, 0.7),
 			transparentize($color-black-light, 0.7)
 		),
-		url(../images/desktop/bg-image-daytime.jpg);
+		url(../images/desktop/bg-image-nighttime.jpg);
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding-inline: 5rem;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		padding-inline: 4rem;
+	}
 }

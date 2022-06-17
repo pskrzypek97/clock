@@ -46,4 +46,9 @@
 			transform: rotate(180deg);
 		}
 	}
+
+	@media only screen and (max-width: $bp-medium) {
+		align-self: flex-start;
+		margin-top: 8rem;
+	}
 }
