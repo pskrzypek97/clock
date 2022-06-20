@@ -1,23 +1,47 @@
 import '../sass/main.scss';
+import * as model from './model';
+import buttonView from './views/buttonView';
+import quoteView from './views/quoteView';
+import clockView from './views/clockView';
+import moreView from './views/moreView';
 
-const btn = document.querySelector('.btn');
-const quote = document.querySelector('.quote');
-const moreWindow = document.querySelector('.more');
-const clock = document.querySelector('.clock');
+const controlData = async () => {
+	try {
+		// 1. Load data (time, location, quote)
+		await model.loadData();
+		model.loadTime();
 
-let deg = 0;
+		// 2. Render the data
+		[clockView, quoteView, moreView].forEach((cl) =>
+			cl.render(model.state.data)
+		);
+	} catch (err) {
+		console.error(err);
+	}
+};
 
-btn.addEventListener('click', function () {
-	[clock, moreWindow, quote].forEach((obj) => obj.classList.toggle('active'));
-	quote.classList.toggle('disappear');
-	deg += 180;
-	this.querySelector('svg').style = `transform: rotate(${deg}deg)`;
+const controlQuote = async () => {
+	try {
+		// 0. Spin button refresh
+		quoteView.startOrStopSpin(true);
 
-	const btnText = moreWindow.classList.contains('active') ? 'less' : 'more';
+		// 1.Load quote
+		await model.loadQoute();
 
-	this.firstChild.innerText = btnText;
-});
+		// 2. Render quote
+		quoteView.render(model.state.data);
 
-quote.querySelector('.quote__refresh').addEventListener('click', function () {
-	this.classList.add('rotate');
-});
+		// 3. Stop spinning
+		quoteView.startOrStopSpin(false);
+	} catch (err) {
+		console.error(err);
+	}
+};
+
+const init = () => {
+	buttonView.handleButton();
+	moreView.addHandlerRender(controlData);
+	quoteView.addHandlerQuote(controlQuote);
+};
+
+init();

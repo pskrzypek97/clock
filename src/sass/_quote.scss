@@ -4,6 +4,10 @@
 	align-items: flex-start;
 	margin-bottom: 30rem;
 	transition: visibility 0.8s, transform 1s;
+	background: linear-gradient(
+		transparentize($color-black-light, 0.99),
+		transparentize($color-black-light, 0.99)
+	);
 
 	&__text {
 		width: 80%;
@@ -32,18 +36,10 @@
 			width: 2.5rem;
 			height: 2.5rem;
 		}
-
-		// & {
-		// 	fill: $color-white;
-		// 	animation-name: spinningRefresh;
-		// 	animation-duration: 1s;
-		// 	animation-iteration-count: infinite;
-		// 	animation-timing-function: linear;
-		// }
 	}
 
 	@media only screen and (max-width: $bp-small) {
-		width: 55rem;
+		width: 60rem;
 		margin-bottom: 0;
 	}
 }

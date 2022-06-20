@@ -88,15 +88,25 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
-	background-image: linear-gradient(
-			transparentize($color-black-light, 0.7),
-			transparentize($color-black-light, 0.7)
-		),
-		url(../images/desktop/bg-image-daytime.jpg);
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	z-index: -1;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: rgba(0, 0, 0, 0.25);
+		z-index: 0;
+	}
+
+	& > * {
+		z-index: 1000;
+	}
 
 	@media only screen and (max-width: $bp-medium) {
 		padding-inline: 5rem;
