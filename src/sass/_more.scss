@@ -2,7 +2,6 @@
 	position: relative;
 	padding-left: 15rem;
 	padding-block: 10rem;
-	backdrop-filter: blur(1rem);
 	background-color: transparentize($color-white, 0.4);
 
 	display: grid;
@@ -63,6 +62,10 @@
 		@media only screen and (max-width: $bp-medium) {
 			display: none;
 		}
+	}
+
+	@supports (backdrop-filter: blur(1rem)) {
+		backdrop-filter: blur(1rem); // doesn't work on firefox :(
 	}
 
 	@media only screen and (max-width: $bp-medium) {

@@ -5,6 +5,7 @@ import nightImg from '../../images/desktop/bg-image-nighttime.jpg';
 
 class ClockView extends View {
 	_parentElement = this._clock.querySelector('.clock__main');
+	_errorMessage = "Couldn't load the clock, please reload the page.";
 	#mainContainer = document.querySelector('.container');
 
 	_generateMarkup() {
@@ -36,6 +37,7 @@ class ClockView extends View {
         </div>`;
 	}
 
+	// changes background picture based on _time statement in View class
 	#changeBackgroundPicture() {
 		if (this._time === 'morning' || this._time === 'afternoon')
 			this.#mainContainer.style.backgroundImage = `url(${dayImg})`;
@@ -43,6 +45,7 @@ class ClockView extends View {
 			this.#mainContainer.style.backgroundImage = `url(${nightImg})`;
 	}
 
+	// adds 0 when hour or minute is single digit number
 	#getCorrectTimeFormat(time) {
 		return time.length === 2 ? time : time.toString().padStart(2, '0');
 	}

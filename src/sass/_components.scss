@@ -67,3 +67,27 @@
 	fill: $color-white;
 	animation: rotate 0.5s infinite linear;
 }
+
+.night {
+	background-color: transparentize($color-black-pitch, 0.4);
+
+	& > div > h3,
+	& > div > p {
+		color: $color-white;
+	}
+
+	& > .more__bar {
+		background-color: lighten($color-black-pitch, 30%);
+	}
+}
+
+.error {
+	width: 100%;
+
+	& > p {
+		font-family: $font-primary;
+		font-weight: $font-700;
+		color: $color-white;
+		font-size: 2.5rem;
+	}
+}

@@ -1,4 +1,4 @@
-import { getJSON } from './helpers';
+import { getJSON, updateTime } from './helpers';
 import { API_DATA, API_LOCATION, API_QUOTE, API_KEY } from './config';
 
 class Data {
@@ -11,6 +11,7 @@ class Data {
 
 export const state = { data: {} };
 
+// assigns data from external API's into Data class
 const createDataObject = (data) => {
 	const {
 		en,
@@ -44,6 +45,7 @@ const createDataObject = (data) => {
 	);
 };
 
+// loads data from external API's
 export const loadData = async () => {
 	try {
 		const data = await Promise.all([
@@ -57,6 +59,7 @@ export const loadData = async () => {
 	}
 };
 
+// loads new quote when user refreshes it
 export const loadQoute = async () => {
 	try {
 		const data = await getJSON(`${API_QUOTE}`);
@@ -67,6 +70,7 @@ export const loadQoute = async () => {
 	}
 };
 
+// gets time from Date object
 export const loadTime = () => {
 	const time = new Date();
 	state.data.time.hour = time.getHours();

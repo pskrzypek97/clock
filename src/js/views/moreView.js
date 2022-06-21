@@ -4,6 +4,7 @@ class MoreView extends View {
 	_parentElement = this._moreWindow;
 
 	_generateMarkup() {
+		this._changeStyle();
 		return `
         <div class="more__info">
             <h3 class="heading-3">Current timezone</h3>
@@ -26,6 +27,13 @@ class MoreView extends View {
         </div>
 
         <div class="more__bar"></div>`;
+	}
+
+	// adds night class to moreWindow based on hour
+	_changeStyle() {
+		const hour = this._data.time.hour;
+		if (hour <= 3 || hour >= 19) this._parentElement.classList.add('night');
+		else this._parentElement.classList.remove('night');
 	}
 }
 

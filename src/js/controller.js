@@ -12,18 +12,18 @@ const controlData = async () => {
 		model.loadTime();
 
 		// 2. Render the data
-		[clockView, quoteView, moreView].forEach((cl) =>
-			cl.render(model.state.data)
+		[clockView, quoteView, moreView].forEach((view) =>
+			view.render(model.state.data)
 		);
 	} catch (err) {
-		console.error(err);
+		clockView.renderError();
 	}
 };
 
 const controlQuote = async () => {
 	try {
 		// 0. Spin button refresh
-		quoteView.startOrStopSpin(true);
+		quoteView.startOrStopSpin();
 
 		// 1.Load quote
 		await model.loadQoute();
@@ -34,7 +34,7 @@ const controlQuote = async () => {
 		// 3. Stop spinning
 		quoteView.startOrStopSpin(false);
 	} catch (err) {
-		console.error(err);
+		quoteView.renderError();
 	}
 };
 

@@ -4,10 +4,6 @@
 	align-items: flex-start;
 	margin-bottom: 30rem;
 	transition: visibility 0.8s, transform 1s;
-	background: linear-gradient(
-		transparentize($color-black-light, 0.99),
-		transparentize($color-black-light, 0.99)
-	);
 
 	&__text {
 		width: 80%;

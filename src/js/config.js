@@ -1,4 +1,4 @@
-export const TIMEOUT_IN_SEC = 10;
+export const TIMEOUT_IN_SEC = 5;
 export const API_DATA = 'http://worldtimeapi.org/api/ip';
 export const API_QUOTE =
 	'https://programming-quotes-api.herokuapp.com/Quotes/random';
