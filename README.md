@@ -1,8 +1,8 @@
-# .clock
+# clock
 
 ## Description
 
-.clock application that allows users check their current time and location and see information about the date and time. User can also generate random programming quotes. Also the application changes its look based on time of the day. This is a solution to the [Clock app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM).
+Clock application that allows users check their current time and location and see information about the date and time. User can also generate random programming quotes. Also the application changes its look based on time of the day. This is a solution to the [Clock app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM).
 
 ## Built with
 
