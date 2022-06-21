@@ -53,7 +53,6 @@ export const loadData = async () => {
 			getJSON(`${API_QUOTE}`),
 			getJSON(`${API_LOCATION}${API_KEY}`),
 		]);
-		console.log(data);
 		state.data = createDataObject(data);
 	} catch (err) {
 		throw err;
