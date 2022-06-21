@@ -2,6 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link
@@ -23,7 +27,7 @@
 			<article class="quote">
 				<blockquote class="quote__text"></blockquote>
 
-				<svg class="quote__refresh">
+				<svg class="quote__refresh" aria-controls="quote__text">
 					<use xlink:href="./images/desktop/sprite.svg#icon-refresh"></use>
 				</svg>
 			</article>
@@ -31,7 +35,7 @@
 			<section class="clock">
 				<div class="clock__main"></div>
 
-				<button class="btn">
+				<button class="btn" aria-controls="more">
 					<p>More</p>
 					<div>
 						<svg>
@@ -44,6 +48,6 @@
 			</section>
 		</main>
 
-		<section class="more"></section>
+		<section class="more" aria-expanded="false"></section>
 	</body>
 </html>

@@ -26,6 +26,11 @@ class ButtonView extends View {
 			? 'less'
 			: 'more';
 		this.#btn.firstChild.innerText = btnText;
+
+		// changes aria-expanded attribute
+		if (this._moreWindow.classList.contains('active'))
+			this._moreWindow.setAttribute('aria-expanded', true);
+		else this._moreWindow.setAttribute('aria-expanded', false);
 	}
 }
 

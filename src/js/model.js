@@ -1,4 +1,4 @@
-import { getJSON, updateTime } from './helpers';
+import { getJSON } from './helpers';
 import { API_DATA, API_LOCATION, API_QUOTE, API_KEY } from './config';
 
 class Data {
@@ -53,6 +53,7 @@ export const loadData = async () => {
 			getJSON(`${API_QUOTE}`),
 			getJSON(`${API_LOCATION}${API_KEY}`),
 		]);
+		console.log(data);
 		state.data = createDataObject(data);
 	} catch (err) {
 		throw err;
